@@ -39,21 +39,19 @@ app.use(express.static('public'));
 
 // Connect to the mysql DB
 sequelize
-  .authenticate()
-  .complete(function(err) {
-    if (!!err) {
-      console.log('Unable to connect to the database:', err);
-  } else {
-      console.log('Connection has been established successfully.');
-    }
-});
+    .authenticate()
+    .complete(function(err) {
+        if (!!err) {
+            console.log('Unable to connect to the database:', err);
+        }
+    });
 
 // Setting routes
 app.get('/', function(req, res) {
     res.render('index.html');
 });
 
-app.get('/decks', function(req, res) {
+app.get('/api/decks', function(req, res) {
     Deck
         .findAll()
         .complete(function(err, decks) {
@@ -68,7 +66,7 @@ app.get('/decks', function(req, res) {
         });
 });
 
-app.get('/decks/:id', function(req, res) {
+app.get('/api/decks/:id', function(req, res) {
     var deckId = parseInt(req.param('id'));
     deckId !== deckId && (res.send(500, { error: 'Id invalid' }));
     Deck
@@ -87,7 +85,7 @@ app.get('/decks/:id', function(req, res) {
         });
 });
 
-app.get('/decks/:deckId/questions', function(req, res) {
+app.get('/api/decks/:deckId/questions', function(req, res) {
     var deckId = parseInt(req.param('deckId'));
     deckId !== deckId && (res.send(500, { error: 'DeckID invalid' }));
     Question
@@ -106,7 +104,7 @@ app.get('/decks/:deckId/questions', function(req, res) {
         });
 });
 
-app.get('/decks/:deckId/questions/:questionId', function(req, res) {
+app.get('/api/decks/:deckId/questions/:questionId', function(req, res) {
     var deckId = parseInt(req.param('deckId')),
         questionId = parseInt(req.param('questionId'));
     deckId !== deckId && (res.send(500, { error: 'DeckId invalid' }));

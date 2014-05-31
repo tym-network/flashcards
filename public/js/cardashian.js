@@ -1,10 +1,8 @@
 (function($) {
-    var Deck = Backbone.Model.extend({
-        url: "/decks"
-    });
+    var Deck = Backbone.Model.extend({});
 
     var Decks = Backbone.Collection.extend({
-        url: "/decks",
+        url: "/api/decks",
         model: Deck
     });
 
@@ -25,7 +23,6 @@
     var DeckView = Backbone.View.extend({
         tagName: "li",
         render: function() {
-            console.log(this);
             this.$el.html(this.model.get('name'));
             return this;
         }
@@ -54,7 +51,6 @@
             }, this);
         },
         addDeck: function(deck) {
-            console.log(deck);
             var deckView = new DeckView({
                 model: deck
             });
