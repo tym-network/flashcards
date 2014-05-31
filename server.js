@@ -126,9 +126,6 @@ app.get('/api/decks/:deckId/questions/:questionId', function(req, res) {
         });
 });
 
-// ... Tout le code de gestion des routes (app.get) se trouve au-dessus
-
 app.use(function(req, res, next){
-    res.setHeader('Content-Type', 'text/plain');
-    res.send(404, 'Not found !');
+    res.render('index.html');
 });
