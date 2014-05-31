@@ -7,6 +7,9 @@ http://caniuse.com/#search=index
 Express
 http://expressjs.com/4x/api.html
 
+Backbone
+http://arturadib.com/hello-backbonejs/docs/2.html
+
 ORM
 http://sequelizejs.com/articles/getting-started
 http://sequelizejs.com/articles/express
@@ -30,6 +33,10 @@ var express = require('express'),
 // Listen on port 3000
 app.listen(3000);
 
+app.set('views', __dirname + '/public/views');
+app.engine('html', require('ejs').renderFile);
+app.use(express.static('public'));
+
 // Connect to the mysql DB
 sequelize
   .authenticate()
@@ -43,7 +50,7 @@ sequelize
 
 // Setting routes
 app.get('/', function(req, res) {
-    response.send('This would be the client side single page app');
+    res.render('index.html');
 });
 
 app.get('/decks', function(req, res) {
@@ -54,7 +61,7 @@ app.get('/decks', function(req, res) {
                 console.log('An error occurred while searching for Decks:', err);
                 res.send(500, { error: 'Unknown error encountered' });
             } else if (!decks) {
-                res.send(500, { error: 'No decks' });
+                res.send(404, { error: 'No decks' });
             } else {
                 res.send(decks);
             }
@@ -73,7 +80,7 @@ app.get('/decks/:id', function(req, res) {
                 console.log('An error occurred while searching for Deck '+deckId, err);
                 res.send(500, { error: 'Unknown error encountered' });
             } else if (!deck) {
-                res.send(500, { error: 'No deck with this id' });
+                res.send(404, { error: 'No deck with this id' });
             } else {
                 res.send(deck);
             }
@@ -92,7 +99,7 @@ app.get('/decks/:deckId/questions', function(req, res) {
                 console.log('An error occurred while searching for Questions of Deck '+deckId, err);
                 res.send(500, { error: 'Unknown error encountered' });
             } else if (!questions) {
-                res.send(500, { error: 'No questions in this deck' });
+                res.send(404, { error: 'No questions in this deck' });
             } else {
                 res.send(questions);
             }
@@ -114,7 +121,7 @@ app.get('/decks/:deckId/questions/:questionId', function(req, res) {
                 res.send(500, { error: 'Unknown error encountered' });
             } else if (!question) {
                 console.log('No question has been found.');
-                res.send(500, { error: 'No question with this id in this deck' });
+                res.send(404, { error: 'No question with this id in this deck' });
             } else {
                 res.send(question);
             }
