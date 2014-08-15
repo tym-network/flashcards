@@ -8,8 +8,37 @@ p {
 }
 
 footer {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 20px 0;
+    background: white;
+    border-top: 1px solid rgb(226, 226, 226);
     text-align: center;
+    color: rgb(173, 173, 173);
+    font-weight: 100;
+}
+
+
+h1 {
+    padding: 30px 0 10px 0;
+    font-family: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
+    font-weight: 100;
+    font-size: 36px;
+    text-shadow: 1px 1px 2px rgb(0,0,0);
+}
+
+h2 {
+    padding: 10px 0 40px 0;
+    font-size: 22px;
+    text-shadow: 1px 1px 2px rgb(0,0,0);
+}
+
+h3 {
+    font-family: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+}
+
+span.blue-text {
+    color: rgb(0, 175, 236);
 }
 
 .btn-home {
@@ -92,26 +121,60 @@ footer {
     padding-bottom: 30px;
 }
 
-h1 {
-    padding: 30px 0 10px 0;
-    font-family: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
-    font-weight: 100;
-    font-size: 36px;
-    text-shadow: 1px 1px 2px rgb(0,0,0);
+.row-description {
+    padding: 20px 0 20px 0;
 }
 
-h2 {
-    padding: 10px 0 40px 0;
-    font-size: 22px;
-    text-shadow: 1px 1px 2px rgb(0,0,0);
+.col-feature {
+    text-align: center;
+    margin: 30px 0 40px 0;
 }
 
-h3 {
-    font-family: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
-    font-weight: 100;
-    font-size: 32px;
+.col-feature p {
+    text-align: center;
 }
 
-span.blue-text {
-    color: rgb(0, 175, 236);
+.col-feature h4 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card-feature {
+    padding: 20px;
+    background: white;
+}
+
+.feature-icons {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+span.feature-icon {
+    position: absolute;
+    display: block;
+    font-size: 80px;
+}
+
+.feature-icon.icon-flash-1 {
+    color: rgba(255, 214, 0, 0.7);
+    transform: rotate(15deg);
+    font-size: 90px;
+    top: -7px;
+    left: -7px;
+}
+
+.feature-icon.icon-cancel-2 {
+    color: rgba(219, 25, 25, 0.7);
+    font-size: 120px;
+    top: -24px;
+    left: -28px;
+}
+
+.feature-icon.icon-block {
+    color: rgba(219, 25, 25, 0.7);
+    font-size: 100px;
+    top: -14px;
+    left: -14px;
 }
