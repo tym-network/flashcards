@@ -16,6 +16,7 @@ http://sequelizejs.com/articles/express
 
 Offline applications
 http://diveintohtml5.info/offline.html
+https://developer.mozilla.org/fr/Apps/Build/Hors-ligne
 */
 
 var express = require('express'),
@@ -49,6 +50,10 @@ sequelize
 // Setting routes
 app.get('/', function(req, res) {
     res.render('index.html');
+});
+
+app.get('/test', function(req, res) {
+    res.render('test.html');
 });
 
 app.get('/api/decks', function(req, res) {
