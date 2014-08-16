@@ -266,7 +266,7 @@ span.feature-icon {
 }
 
 .question-quicklinks {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 5px 0;
     text-align: center; 
     .question-quicklink {
         width: 20px;
@@ -279,7 +279,7 @@ span.feature-icon {
             width: 20px;
             height: 2px;
             background: rgb(43, 43, 43);
-            box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+            box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.2);
             border-radius: 1px;
         }
         .normal-quicklink {
@@ -304,4 +304,21 @@ span.feature-icon {
             background: @cardashian-blue;
         }
     }
+}
+
+.question-left {
+    margin: 90px 0 0 0;
+    text-align: right;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), -1px -1px 1px rgba(0,0,0,0.6), -1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.question-right {
+    margin: 90px 0 0 0;
+    text-align: left;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1), -1px 1px 0 rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0,0,0,0.6), 1px -1px 1px rgba(0,0,0,0.6);
+}
+
+.question-arrow {
+    font-size: 50px;
+    margin: 0 -25px;
 }
