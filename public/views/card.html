@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Théotime Loiseau"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cardashian</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/cardashian.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="logoCardashian">
+                    <div id="card1" class="card"></div>
+                    <div id="card2" class="card"></div>
+                    <div id="card3" class="card"></div>
+                    <a class="navbar-brand" href="#"><span class="blue-text">Card</span>ashian</a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <form class="navbar-form navbar-right" role="search">
+                    <label for="nav-search" class="sr-only">Search</label>
+                    <input type="text" class="form-control searchbar" placeholder="Search" id="nav-search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section class="pannel-question">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="row question-quicklinks">
+                    <div class="question-quicklink correct">
+                        <div class="border-quicklink"></div>
+                        <div class="normal-quicklink">1</div>
+                        <div class="mouseover-quicklink">1</div>
+                    </div>
+                    <div class="question-quicklink incorrect">
+                        <div class="border-quicklink"></div>
+                        <div class="normal-quicklink">2</div>
+                        <div class="mouseover-quicklink">2</div>
+                    </div>
+                    <div class="question-quicklink current">
+                        <div class="border-quicklink"></div>
+                        <div class="normal-quicklink">3</div>
+                        <div class="mouseover-quicklink">3</div>
+                    </div>
+                    <div class="question-quicklink">
+                        <div class="border-quicklink"></div>
+                        <div class="normal-quicklink">4</div>
+                        <div class="mouseover-quicklink">4</div>
+                    </div>
+                    <div class="question-quicklink">
+                        <div class="border-quicklink"></div>
+                        <div class="normal-quicklink">5</div>
+                        <div class="mouseover-quicklink">5</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="question">
+                            <div class="question-header">
+                                <svg width="120" height="60" class="pull-left">
+                                    <polygon points="0,0 120,0 60,60 0,60" />
+                                </svg>
+                                <h4>Deck Name</h4>
+                                <svg width="60" height="60" class="pull-right">
+                                    <polygon points="60,0 60,60 0,60" />
+                                </svg>
+                                <div class="current-page">3</div>
+                                <div class="number-page">5</div>
+                            </div>
+                            <div class="question-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante vulputate, congue orci cursus, lacinia nulla. Cras mollis velit ut odio rutrum, at cursus mi accumsan. Cras lorem sem, accumsan vitae ultrices vitae, laoreet non felis. In dapibus justo vitae est faucibus volutpat id?
+                            </div>
+                        </div>
+                        <div class="answer">
+                            <span class="icon-cancel answer-icon pull-right"></span>
+                            <span class="icon-ok answer-icon pull-right"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">© Théotime Loiseau 2014</div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script async defer src="/js/cardashian.js"></script>
+</body>
+</html>

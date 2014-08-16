@@ -56,6 +56,10 @@ app.get('/test', function(req, res) {
     res.render('test.html');
 });
 
+app.get('/card', function(req, res) {
+    res.render('card.html');
+});
+
 app.get('/api/decks', function(req, res) {
     Deck
         .findAll()

@@ -1,0 +1,307 @@
+/*
+ * Variables
+ */
+@ultra-light-grey: rgb(241, 241, 241);
+@light-grey: rgb(231, 231, 231);
+@medium-light-grey: rgb(226, 226, 226);
+@medium-grey: rgb(210, 210, 210);
+@medium-dark-grey: rgb(173, 173, 173);
+@cardashian-blue: rgb(0, 175, 236);
+@green: rgb(63, 179, 79);
+@red: rgb(209, 20, 27);
+
+@thin-font: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
+
+/*
+ * Homepage
+ */
+body {
+    padding-top: 80px;
+    background: @ultra-light-grey;
+}
+
+p {
+    text-align: justify;
+}
+
+footer {
+    padding: 20px 0 20px 0;
+    background: white;
+    border-top: 1px solid @medium-light-grey;
+    text-align: center;
+    color: @medium-dark-grey;
+    font-weight: 100;
+}
+
+h1 {
+    padding: 30px 0 10px 0;
+    font-family: @thin-font;
+    font-weight: 100;
+    font-size: 36px;
+    text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+    padding: 10px 0 40px 0;
+    font-size: 22px;
+    text-shadow: 1px 1px 2px black;
+}
+
+h3 {
+    font-family: @thin-font;
+    font-weight: 100;
+    font-size: 32px;
+}
+
+span.blue-text {
+    color: @cardashian-blue;
+}
+
+.btn-home {
+    font-size: 22px;
+    outline: none;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.btn-local-desks {
+    background: @green;
+} 
+
+.btn-popular-desks {
+    background: @cardashian-blue;
+}
+
+.navbar {
+    min-height: 80px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    .searchbar {
+        margin-top: 18px;
+        background: @ultra-light-grey;
+        border: none;
+    }
+}
+
+#logoCardashian {
+    position: relative;
+    width: 70px;
+    height: 80px;
+    .navbar-brand {
+        margin-top: 16px;
+        margin-left: 60px;
+        font-size: 32px;
+        color: @medium-dark-grey;
+        font-family: @thin-font;
+        font-weight: 100;
+    }
+    .card {
+        position: absolute;
+        width: 22px;
+        height: 34px;
+        top: 24px;
+        border-radius: 5px;
+    }
+    #card1 {
+        width: 28px;
+        height: 40px;
+        top: 20px;
+        left: 20px;
+        background: @light-grey;
+        z-index: 5;
+    }
+    #card2 {
+        left: 14px;
+        background: @medium-dark-grey;
+        transform: rotate(-10deg);
+        z-index: 4;
+    }
+    #card3 {
+        left: 32px;
+        background: @medium-grey;
+        transform: rotate(10deg);
+        z-index: 3;
+    }
+}
+
+.row-intro {
+    background: url('../img/shattered-island.gif') repeat;
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.row-description {
+    padding: 20px 0 20px 0;
+}
+
+.col-feature {
+    text-align: center;
+    margin: 30px 0 40px 0;
+    p {
+        text-align: center;
+    }
+    h4 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+}
+
+.card-feature {
+    padding: 20px;
+    background: white;
+}
+
+.feature-icons {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+span.feature-icon {
+    position: absolute;
+    display: block;
+    font-size: 80px;
+    color: @medium-dark-grey;
+    &.icon-flash {
+        color: rgba(255, 214, 0, 0.7);
+        transform: rotate(15deg);
+        font-size: 90px;
+        top: -7px;
+        left: -7px;
+    }
+    &.icon-cancel-1 {
+        color: rgba(219, 25, 25, 0.7);
+        font-size: 120px;
+        top: -24px;
+        left: -28px;
+    }
+    &.icon-block {
+        color: rgba(219, 25, 25, 0.7);
+        font-size: 100px;
+        top: -14px;
+        left: -14px;
+    }
+}
+
+/*
+ * Questions
+ */
+
+.pannel-question {
+    background: url('../img/tweed.png') repeat;
+} 
+
+.question {
+    min-height: 200px;
+    background: white;
+    margin: 30px 0 30px 0;
+    box-shadow: 0 0 7px black;
+}
+
+.question-header {
+    position: relative;
+    background: @ultra-light-grey;
+    height: 60px;
+    h4 {
+        display: inline-block;
+        font-size: 24px;
+        font-family: @thin-font;
+        margin-top: 18px;
+    }
+    svg {
+        position: relative;
+        z-index: 10;
+    }
+    polygon {
+        fill: @cardashian-blue;
+    }
+    .current-page {
+        position: absolute;
+        width: 40px;
+        right: 30px;
+        top: 6px;
+        text-align: right;
+        font-family: @thin-font;
+        font-size: 24px;
+        z-index: 5;
+    }
+    .number-page {
+        position: absolute;
+        width: 34px;
+        right: 0px;
+        top: 25px;
+        color: white;
+        text-align: left;
+        font-family: @thin-font;
+        font-size: 24px;
+        z-index: 15;
+        overflow: hidden;
+    }
+}
+
+.question-content {
+    padding: 20px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.answer {
+    min-height: 60px;
+    background: white;
+    margin: 0 0 30px 0;
+    padding: 20px;
+    text-align: justify;
+    font-size: 16px;
+    box-shadow: 0 0 7px black;
+    .answer-icon {
+        position: relative;
+        top: -5px;
+        color: rgba(224, 224, 224, 0.8);
+        text-shadow: 1px 4px 6px rgb(255, 255, 255), 0 0 0 rgb(155, 155, 155), 1px 4px 6px rgb(255, 255, 255);
+        font-size: 30px;
+        line-height: 16px;
+    }
+}
+
+.question-quicklinks {
+    margin: 20px 0 20px 0;
+    text-align: center; 
+    .question-quicklink {
+        width: 20px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        .border-quicklink {
+            position: absolute;
+            top:-1px;
+            width: 20px;
+            height: 2px;
+            background: rgb(43, 43, 43);
+            box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+            border-radius: 1px;
+        }
+        .normal-quicklink {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+        .mouseover-quicklink {
+            display: none;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+        }
+        &.correct .border-quicklink {
+            background: @green;
+        }
+        &.incorrect .border-quicklink {
+            background: @red;
+        }
+        &.current .border-quicklink {
+            background: @cardashian-blue;
+        }
+    }
+}
