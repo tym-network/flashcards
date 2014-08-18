@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cardashian</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/cardashian.min.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
 </head>
 <body class="question-page">
-    <nav class="navbar navbar-fixed-top" role="navigation">
+    <nav role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <div id="logoCardashian">
@@ -30,66 +30,47 @@
         </div>
     </nav>
     <section>
-        <div class="container">
-            <div class="col-lg-12">
-                <div class="row question-quicklinks">
-                    <div class="question-quicklink correct">
-                        <div class="border-quicklink"></div>
-                        <div class="normal-quicklink">1</div>
-                        <div class="mouseover-quicklink">1</div>
-                    </div>
-                    <div class="question-quicklink incorrect">
-                        <div class="border-quicklink"></div>
-                        <div class="normal-quicklink">2</div>
-                        <div class="mouseover-quicklink">2</div>
-                    </div>
-                    <div class="question-quicklink current">
-                        <div class="border-quicklink"></div>
-                        <div class="normal-quicklink">3</div>
-                        <div class="mouseover-quicklink">3</div>
-                    </div>
-                    <div class="question-quicklink">
-                        <div class="border-quicklink"></div>
-                        <div class="normal-quicklink">4</div>
-                        <div class="mouseover-quicklink">4</div>
-                    </div>
-                    <div class="question-quicklink">
-                        <div class="border-quicklink"></div>
-                        <div class="normal-quicklink">5</div>
-                        <div class="mouseover-quicklink">5</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-1 col-md-2 question-left">
-                        <span class="icon-left-open-big question-arrow"></span>
-                    </div>
-                    <div class="col-xs-10  col-md-8">
-                        <div class="question">
-                            <div class="question-header">
-                                <svg width="120" height="60" class="pull-left">
-                                    <polygon points="0,0 120,0 60,60 0,60" />
-                                </svg>
-                                <h4>Deck Name</h4>
-                                <svg width="60" height="60" class="pull-right">
-                                    <polygon points="60,0 60,60 0,60" />
-                                </svg>
-                                <div class="current-page">3</div>
-                                <div class="number-page">5</div>
-                            </div>
-                            <div class="question-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante vulputate, congue orci cursus, lacinia nulla. Cras mollis velit ut odio rutrum, at cursus mi accumsan. Cras lorem sem, accumsan vitae ultrices vitae, laoreet non felis. In dapibus justo vitae est faucibus volutpat id?
-                            </div>
-                        </div>
-                        <div class="answer">
-                            <span class="icon-cancel answer-icon pull-right"></span>
-                            <span class="icon-ok answer-icon pull-right"></span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </div>
-                    </div>
-                    <div class="col-xs-1 col-md-2 question-right">
-                        <span class="icon-right-open-big question-arrow"></span>
-                    </div>
-                </div>
+        <div class="left-pannel">
+            <svg width="310" height="60">
+                <polygon points="0,0 310,0 250,60 0,60" />
+            </svg>
+            <h4>DeckName</h4>
+            <div class="time">
+                <span class="icon-clock"></span> 01:13
+            </div>
+            <ul class="question-list">
+                <li class="question-link">Question 1<span class="icon-ok"></span></li>
+                <li class="question-link">Question 2<span class="icon-cancel"></span></li>
+                <li class="question-link">Question 3</li>
+                <li class="question-link">Question 4</li>
+                <li class="question-link">Question 5</li>
+            </ul>
+        </div>
+        <div class="top-bar">
+            <button class="pull-right">Next</button>
+            <button class="pull-right">Previous</button>
+            <h4>Question 3/5</h4>
+        </div>
+        <div class="question-card">
+            <div class="question">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante vulputate, congue orci cursus, lacinia nulla. Cras mollis velit ut odio rutrum, at cursus mi accumsan. Cras lorem sem, accumsan vitae ultrices vitae, laoreet non felis. In dapibus justo vitae est faucibus volutpat id?
+            </div>
+            <svg width="500" height="50">
+                <filter id="dropshadow" height="130%">
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+                    <feOffset dx="0" dy="2" result="offsetblur"/> <!-- how much to offset -->
+                    <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.4"/>
+                    </feComponentTransfer>
+                    <feMerge> 
+                        <feMergeNode/> <!-- this contains the offset blurred image -->
+                        <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+                    </feMerge>
+                </filter>
+                <polygon points="0,0 500,0 0,40" style="filter:url(#dropshadow)"/>
+            </svg>
+            <div class="answer">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
         </div>
     </section>
@@ -97,7 +78,7 @@
         <div class="container">© Théotime Loiseau 2014</div>
     </footer>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
     <script async defer src="/js/cardashian.js"></script>

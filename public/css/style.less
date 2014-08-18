@@ -7,6 +7,7 @@
 @medium-grey: rgb(210, 210, 210);
 @medium-dark-grey: rgb(173, 173, 173);
 @cardashian-blue: rgb(0, 175, 236);
+@deep-blue: rgb(32, 46, 64);
 @green: rgb(63, 179, 79);
 @red: rgb(209, 20, 27);
 
@@ -16,7 +17,6 @@
  * Homepage
  */
 body {
-    padding-top: 80px;
     background: @ultra-light-grey;
 }
 
@@ -72,12 +72,11 @@ span.blue-text {
     background: @cardashian-blue;
 }
 
-.navbar {
-    min-height: 80px;
+nav {
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     .searchbar {
-        margin-top: 18px;
+        margin-top: 14px;
         background: @ultra-light-grey;
         border: none;
     }
@@ -188,141 +187,104 @@ span.feature-icon {
 /*
  * Questions
  */
- .question-page {
-    background: url("../img/buried.png") repeat rgb(32, 46, 64);
- }
-
-.question {
-    min-height: 200px;
-    background: white;
-    margin: 30px 0 30px 0;
-    box-shadow: 0 0 7px black;
+.left-pannel {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    float: left;
+    background: @deep-blue;
+    color: white;
+    svg {
+        position: absolute;
+    }
+    polygon {
+        fill: @cardashian-blue;
+    }
+    h4 {
+        position: relative;
+        margin: 17px 0 17px 10px;
+        color: white;
+        font-size: 24px;
+    }
+    .time {
+        padding: 10px 0 10px 0;
+        font-family: @thin-font;
+        font-size: 30px;
+        text-align: center;
+    }
+    .question-list {
+        padding: 0 10px;
+        font-family: @thin-font;
+        list-style-type: none;
+    }
+    .question-list li {
+        padding: 4px 0 4px;
+        border-top: 1px solid rgb(26, 38, 53);
+        &:first-child {
+            border-top: none;
+        }
+        span {
+            float: right;
+            &.icon-ok {
+                color: @green;
+            }
+            &.icon-cancel {
+                color: @red;
+            }
+        }
+    }
 }
 
-.question-header {
-    position: relative;
-    background: @ultra-light-grey;
-    height: 60px;
+.top-bar {
+    height: 80px;
+    margin: 0 25px 0 250px;
+    padding-top: 20px;
     h4 {
-        display: inline-block;
-        font-size: 24px;
+        position: relative;
+        margin: 0;
+        padding: 17px 0 17px 60px;
         font-family: @thin-font;
-        margin-top: 18px;
+        font-size: 24px;
+    }
+    button {
+        background: white;
+        border: none;
+        width: 150px;
+        height: 40px;
+        margin: 10px 5px; 
+        border-radius: 5px;
+    }
+}
+
+.question-card {
+    max-width: 520px;
+    padding: 0 10px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    text-align: justify;
+    .question {
+        position: relative;
+        z-index: 10;
+        background: white;
+        padding: 20px;
+        border-radius: 5px 5px 0 0;
+        font-style: italic;
+        font-size: 14px;
     }
     svg {
         position: relative;
         z-index: 10;
     }
     polygon {
-        fill: @cardashian-blue;
+        fill: white;
     }
-    .current-page {
-        position: absolute;
-        width: 40px;
-        right: 30px;
-        top: 6px;
-        text-align: right;
-        font-family: @thin-font;
-        font-size: 24px;
+    .answer {
+        position: relative;
+        top: -75px;
         z-index: 5;
+        padding: 50px 20px 20px 20px;
+        background: @cardashian-blue;
+        border-radius: 0 0 5px 5px;
+        color: rgba(255, 255, 255, 0);
     }
-    .number-page {
-        position: absolute;
-        width: 34px;
-        right: 0px;
-        top: 25px;
-        color: white;
-        text-align: left;
-        font-family: @thin-font;
-        font-size: 24px;
-        z-index: 15;
-        overflow: hidden;
-    }
-}
-
-.question-content {
-    padding: 20px;
-    text-align: justify;
-    font-size: 16px;
-}
-
-.answer {
-    min-height: 60px;
-    background: white;
-    margin: 0 0 30px 0;
-    padding: 20px;
-    text-align: justify;
-    font-size: 16px;
-    box-shadow: 0 0 7px black;
-    .answer-icon {
-        position: relative;
-        top: -5px;
-        color: rgba(224, 224, 224, 0.8);
-        text-shadow: 1px 4px 6px rgb(255, 255, 255), 0 0 0 rgb(155, 155, 155), 1px 4px 6px rgb(255, 255, 255);
-        font-size: 30px;
-        line-height: 16px;
-    }
-}
-
-.question-quicklinks {
-    margin: 20px 0 5px 0;
-    text-align: center; 
-    .question-quicklink {
-        width: 20px;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        color: rgb(16, 21, 34);
-        text-shadow: 1px 1px 0 rgba(44, 131, 158, 0.1),-1px -1px 1px rgba(0, 0, 0, 0.1);
-        font-weight: 200;
-        .border-quicklink {
-            position: absolute;
-            top:-1px;
-            width: 20px;
-            height: 2px;
-            background: black;
-            box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.2);
-            border-radius: 1px;
-        }
-        .normal-quicklink {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-        }
-        .mouseover-quicklink {
-            display: none;
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: red;
-            border-radius: 0 0 2px 2px;
-        }
-        &.correct .border-quicklink {
-            background: @green;
-        }
-        &.incorrect .border-quicklink {
-            background: @red;
-        }
-        &.current .border-quicklink {
-            background: @cardashian-blue;
-        }
-    }
-}
-
-.question-left {
-    margin: 90px 0 0 0;
-    text-align: right;
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), -1px -1px 1px rgba(0,0,0,0.6), -1px 1px 1px rgba(0,0,0,0.6);
-}
-
-.question-right {
-    margin: 90px 0 0 0;
-    text-align: left;
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1), -1px 1px 0 rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0,0,0,0.6), 1px -1px 1px rgba(0,0,0,0.6);
-}
-
-.question-arrow {
-    font-size: 50px;
-    margin: 0 -25px;
-    color: rgb(19, 27, 37);
 }
