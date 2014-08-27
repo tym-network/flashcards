@@ -64,16 +64,29 @@
 /*
  * Variables
  */
+html {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -61px;
+  /* Pad bottom by footer height */
+  padding: 0 0 61px;
+}
 /*
  * Homepage
  */
 body {
+  height: 100%;
   background: #f1f1f1;
 }
 p {
   text-align: justify;
 }
 footer {
+  position: relative;
   padding: 20px 0 20px 0;
   background: white;
   border-top: 1px solid #e2e2e2;
@@ -114,6 +127,8 @@ span.blue-text {
   background: #00afec;
 }
 nav {
+  position: relative;
+  z-index: 10;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -221,10 +236,12 @@ span.feature-icon.icon-block {
  * Questions
  */
 .left-pannel {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 250px;
   height: 100%;
-  float: left;
+  padding: 80px 0 61px;
   background: #202e40;
   color: white;
 }
@@ -247,35 +264,55 @@ span.feature-icon.icon-block {
   text-align: center;
 }
 .left-pannel .question-list {
-  padding: 0 10px;
-  font-family: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
-  list-style-type: none;
+  position: relative;
+  width: 100%;
 }
-.left-pannel .question-list li {
-  padding: 4px 0 4px;
-  border-top: 1px solid #1a2635;
+.left-pannel .question-list tr {
+  height: 40px;
 }
-.left-pannel .question-list li:first-child {
-  border-top: none;
+.left-pannel .question-list td {
+  font-weight: 100;
+  text-align: center;
+  vertical-align: top;
 }
-.left-pannel .question-list li span {
-  float: right;
+.left-pannel .question-list td.current {
+  color: #00afec;
 }
-.left-pannel .question-list li span.icon-ok {
+.left-pannel .question-list td.current .circle {
+  border-color: #00afec;
+}
+.left-pannel .question-list td.correctAnswer {
   color: #3fb34f;
 }
-.left-pannel .question-list li span.icon-cancel {
+.left-pannel .question-list td.correctAnswer .circle {
+  border-color: #3fb34f;
+}
+.left-pannel .question-list td.wrongAnswer {
   color: #d1141b;
+}
+.left-pannel .question-list td.wrongAnswer .circle {
+  border-color: #d1141b;
+}
+.left-pannel .question-list td .circle {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  padding-top: 2px;
+  border: 3px solid transparent;
+  border-radius: 15px;
+}
+.right-pannel {
+  margin: 0 0 0 250px;
 }
 .top-bar {
   height: 80px;
-  margin: 0 25px 0 250px;
-  padding-top: 20px;
+  margin: 0 25px 0 25px;
+  padding: 10px 0 0 0;
 }
 .top-bar h4 {
   position: relative;
   margin: 0;
-  padding: 17px 0 17px 60px;
+  padding: 17px 0 17px 40px;
   font-family: 'Raleway', 'Helvetica Neue', 'Century Gothic', sans-serif;
   font-size: 24px;
 }

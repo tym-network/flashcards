@@ -11,69 +11,82 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
 </head>
 <body class="question-page">
-    <nav role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <div id="logoCardashian">
-                    <div id="card1" class="card"></div>
-                    <div id="card2" class="card"></div>
-                    <div id="card3" class="card"></div>
-                    <a class="navbar-brand" href="#"><span class="blue-text">Card</span>ashian</a>
+    <div id="wrap">
+        <nav role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <div id="logoCardashian">
+                        <div id="card1" class="card"></div>
+                        <div id="card2" class="card"></div>
+                        <div id="card3" class="card"></div>
+                        <a class="navbar-brand" href="#"><span class="blue-text">Card</span>ashian</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <form class="navbar-form navbar-right" role="search">
+                        <label for="nav-search" class="sr-only">Search</label>
+                        <input type="text" class="form-control searchbar" placeholder="Search" id="nav-search">
+                    </form>
                 </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <form class="navbar-form navbar-right" role="search">
-                    <label for="nav-search" class="sr-only">Search</label>
-                    <input type="text" class="form-control searchbar" placeholder="Search" id="nav-search">
-                </form>
+        </nav>
+        <section>
+            <div class="left-pannel">
+                <svg width="310" height="60">
+                    <polygon points="0,0 310,0 250,60 0,60"/>
+                </svg>
+                <h4>DeckName</h4>
+                <div class="time">
+                    <span class="icon-clock"></span> 01:13
+                </div>
+                <table class="question-list">
+                    <tr>
+                        <td class="correctAnswer"><div class="circle">1</div></td>
+                        <td class="wrongAnswer"><div class="circle">2</div></td>
+                        <td class="current"><div class="circle">3</div></td>
+                        <td><div class="circle">4</div></td>
+                        <td><div class="circle">5</div></td>
+                        <td><div class="circle">6</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="circle">7</div></td>
+                        <td><div class="circle">8</div></td>
+                        <td><div class="circle">9</div></td>
+                        <td><div class="circle">10</div></td>
+                    </tr>
+                </table>
             </div>
-        </div>
-    </nav>
-    <section>
-        <div class="left-pannel">
-            <svg width="310" height="60">
-                <polygon points="0,0 310,0 250,60 0,60" />
-            </svg>
-            <h4>DeckName</h4>
-            <div class="time">
-                <span class="icon-clock"></span> 01:13
+            <div class="right-pannel">
+                <div class="top-bar">
+                    <button class="pull-right">Next</button>
+                    <button class="pull-right">Previous</button>
+                    <h4>Question 3/10</h4>
+                </div>
+                <div class="question-card">
+                    <div class="question">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante vulputate, congue orci cursus, lacinia nulla. Cras mollis velit ut odio rutrum, at cursus mi accumsan. Cras lorem sem, accumsan vitae ultrices vitae, laoreet non felis. In dapibus justo vitae est faucibus volutpat id?
+                    </div>
+                    <svg width="500" height="50">
+                        <filter id="dropshadow" height="130%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+                            <feOffset dx="0" dy="2" result="offsetblur"/> <!-- how much to offset -->
+                            <feComponentTransfer>
+                                <feFuncA type="linear" slope="0.4"/>
+                            </feComponentTransfer>
+                            <feMerge> 
+                                <feMergeNode/> <!-- this contains the offset blurred image -->
+                                <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+                            </feMerge>
+                        </filter>
+                        <polygon points="0,0 500,0 0,40" style="filter:url(#dropshadow)"/>
+                    </svg>
+                    <div class="answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                </div>
             </div>
-            <ul class="question-list">
-                <li class="question-link">Question 1<span class="icon-ok"></span></li>
-                <li class="question-link">Question 2<span class="icon-cancel"></span></li>
-                <li class="question-link">Question 3</li>
-                <li class="question-link">Question 4</li>
-                <li class="question-link">Question 5</li>
-            </ul>
-        </div>
-        <div class="top-bar">
-            <button class="pull-right">Next</button>
-            <button class="pull-right">Previous</button>
-            <h4>Question 3/5</h4>
-        </div>
-        <div class="question-card">
-            <div class="question">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante vulputate, congue orci cursus, lacinia nulla. Cras mollis velit ut odio rutrum, at cursus mi accumsan. Cras lorem sem, accumsan vitae ultrices vitae, laoreet non felis. In dapibus justo vitae est faucibus volutpat id?
-            </div>
-            <svg width="500" height="50">
-                <filter id="dropshadow" height="130%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-                    <feOffset dx="0" dy="2" result="offsetblur"/> <!-- how much to offset -->
-                    <feComponentTransfer>
-                        <feFuncA type="linear" slope="0.4"/>
-                    </feComponentTransfer>
-                    <feMerge> 
-                        <feMergeNode/> <!-- this contains the offset blurred image -->
-                        <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-                    </feMerge>
-                </filter>
-                <polygon points="0,0 500,0 0,40" style="filter:url(#dropshadow)"/>
-            </svg>
-            <div class="answer">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <footer>
         <div class="container">© Théotime Loiseau 2014</div>
     </footer>
